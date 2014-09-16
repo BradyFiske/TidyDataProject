@@ -108,6 +108,7 @@ names(means_stds) <- gsub("-Z", "Z_Axis", names(means_stds))
 names(means_stds) <- gsub("Jerk", "Over_Time_", names(means_stds))
 names(means_stds) <- gsub("Mag", "Magnitude_", names(means_stds))
 names(means_stds) <- gsub("_$", "", names(means_stds))
+names(means_stds) <- gsub("Body_Body", "Body_", names(means_stds))
 
 #### Manipulate the dataset
 
@@ -123,7 +124,7 @@ levels(means_stds$Activity_Type) = c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOW
 ## Reorder the dataset by Subject by Activity Type
 means_stds1 <- means_stds[order(means_stds$SubjectID, means_stds$Activity_Type),]
 
-## Need to install and activate the plyr package to use ddply function
+#### Need to install and activate the plyr package to use ddply function
 
 ## Generalized check and install function for R packages    
 packages<-function(x){
