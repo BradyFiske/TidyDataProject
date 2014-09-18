@@ -1,0 +1,19 @@
+### Operation of run_analysis.R
+
+1. Read each dataset into an R data frame
+2. Add descriptive column name to test and training subject files
+3. Add descriptive column name to test and training activity files
+4. Use a loop to assign each of the 561 feature variables to columns in the raw measurement and computed summary data frames for TEST and TRAIN
+5. Bind the activity, subject and measurement data frames for the TEST and TRAIN subsets using cbind
+6. Bind the TEST and TRAIN subsets using rbind
+7. Extract subsets of subjects, activities and measurements for any variable identified as a mean or standard deviation summary by grepping the column headers and creating a series of subsets
+8. Bind the subsets of subjects, activities and measurements created in step 7 to create the desired subset of subject IDs, activities, means and standard deviation values (referenced as the "measurements" data frame) using cbind
+9. Using various string manipulations, clarify as best as possible the variable names taken from the features.txt dataset
+10. Sort the measurements data frame by activity type
+11. Turn the activity type variable into a factor
+12. Recode the activity type variable to better describe the observation (e.g., "1" to "WALKING", "2" to "WALKING UPSTAIRS", etc.)
+13. Resort the means and measurements data frame by sujbect ID by activity type
+14. Install and make available the plyr package
+15. Create a summary by subject by activity type of the measurements data frame (referenced as "summary measurements") using ddply
+16. Fix header names for subject ID and activity type in summary measurements
+17. Use write.table to create a text file version of the summary measurements data frame with the variables listed below:
