@@ -3,12 +3,14 @@
 
 ## This R script assumes that the zipped file from the data source 
 ## (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) has already been downloaded and unzipped
-## into a working directory.  If you haven't already downloaded and unzipped the file, do so now.  Make sure this script is in the same working directory as 
+## into a working directory named /Desktop/Coursera/UCI HAR Dataset.  If you haven't already downloaded and unzipped the file, do so now.  Make sure this script is in the same working directory as 
 ## the data files that have been unzipped from the download. See http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 ## for details on the data collection process.
 
-## See the README.rm file in this github repository () for detailed information on the data manipulation process.  In brief, this
-## script reassembles a series of data sets derived from experiments in tracking smartphone accelerometer and gyroscope sensor readings
+## See the RunAnalysisCodebook.rmd file in this github repository (https://github.com/BradyFiske/TidyDataProject) for detailed information on the data manipulation process.  
+## See the README.rmd file in this same repository for a narrative description of how the run_analsysis.R script works.
+
+## In brief, thisscript reassembles a series of data sets derived from experiments in tracking smartphone accelerometer and gyroscope sensor readings
 ## for human subjects engaged in a series of defined activities.  The script then extracts a group of variables related to measurement means
 ## and standard deviations for the sensor measurements, renames the variables, and summarizes the data by deriving an overall mean 
 ## for each variable by subject by activity.
